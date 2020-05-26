@@ -1,0 +1,10 @@
+<h1>Tous nos films</h1>
+
+<ul>
+<% @articles.each do |article|  %>
+  <li><%= article.title %></li>
+  <%= link_to 'Details', article_path(article) %>
+  <% end %>
+</ul>
+
+<%= link_to 'Do you want to create a new article ?', new_article_path %>
